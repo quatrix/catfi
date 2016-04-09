@@ -35,7 +35,7 @@ void loop() {
     float load = analogToLoad(analogRead(A0));
 
     if (lastLoad != load) {
-        get("108.161.129.205", "/weight="+String(load));
+        get("108.161.129.205", "/weight?grams="+String(load));
         lastLoad = load;
     }
 
